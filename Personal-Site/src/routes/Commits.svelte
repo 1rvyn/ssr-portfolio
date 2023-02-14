@@ -64,6 +64,12 @@
   a.language.Ejs {
     color: #a91e50;
   }
+
+  #commit-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+  }
 </style>
 
   <p id ="commit-text">Last seen commits<br>
@@ -73,7 +79,8 @@
          class={`language ${commit.language}`}>
         {commit.language}
       </a>
-      {#if index !== commits.length - 1}, {/if}
+      {#if index !== commits.length - 1}   {/if}
+
     {/if}
   {/each}
 </p>

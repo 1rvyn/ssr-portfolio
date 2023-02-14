@@ -45,6 +45,7 @@
 		font-size: 1.5rem;
 		padding-top: 2.5rem;
 		font-weight: bold;
+		color: #f5f5f5;
 	}
 
 </style>

@@ -64,7 +64,7 @@ import { onMount } from 'svelte/internal';
 		font-size: 64px;
 		font-weight: bold;
 		text-align: center;
-		color: black;
+		color: white;
 		position: absolute;
 		top: 50%;
 		left: 50%;

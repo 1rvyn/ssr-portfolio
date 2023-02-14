@@ -62,7 +62,7 @@
   <span class={activeButton === 'Go' ? 'lang-button active' : 'lang-button'} id="Go" on:click={() => toggleDropdown('Go')}>Go<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span class={activeButton === 'Node.js' ? 'lang-button active' : 'lang-button'} id="Node" on:click={() => toggleDropdown('Node')}>Node.js<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span class={activeButton === 'Svelte' ? 'lang-button active' : 'lang-button'} id="Svelte" on:click={() => toggleDropdown('Svelte')}>Svelte<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  and
+  <span id="intro-langes">and</span>
   <span class={activeButton === 'Others' ? 'lang-button active' : 'lang-button'} id="Others" on:click={() => toggleDropdown('Others')}>Others<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
 </div>
 
@@ -77,6 +77,7 @@
   #current-languages {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
   }
   
   .lang-button {
