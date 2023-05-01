@@ -72,15 +72,14 @@
   }
 </style>
 
-  <p id ="commit-text">Last seen commits<br>
+<p id ="commit-text">Last seen commits<br>
   {#each commits as commit, index}
     {#if commit.language}
       <a href={`https://github.com/${commit.repo}/commit/${commit.sha}`}
          class={`language ${commit.language}`}>
         {commit.language}
       </a>
-      {#if index !== commits.length - 1}   {/if}
-
+      {@html index !== commits.length - 1 ? ', ' : ''}
     {/if}
   {/each}
 </p>
