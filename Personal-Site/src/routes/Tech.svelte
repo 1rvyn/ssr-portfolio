@@ -6,34 +6,46 @@
   
   const projects = {
     Go: [
-      { name: "Authentication microservice", url: "https://github.com/1rvyn/backend-api", logo: "github-icon.png", description: "A go web-app to handle login/signup + other backend needs for my frontend honours project." },
-      { name: "Endpoint-stresser", url: "https://github.com/1rvyn/endpoint-stresser", logo: "github-icon.png", description: "An endpoint stresser using Go-Routines to test my web-app scalability." },
-    ],
-    Node: [
-      { name: "F1 data web app", url: "https://github.com/1rvyn/f1-data", logo: "github-icon.png", 
-      description: "A web app that allows users to create matplotlib graphs/charts showing data from f1 races from a telemetry client."},
-      { name: "Youtube data overhead viewer ", url: "https://github.com/1rvyn/", logo: "github-icon.png", 
-      description: "A data visualisation tool that allows users to see semi-accurate caluclations on the amount of data they use on youtube. (repo has a private key inside it whoops)"},
-    ],
-    Svelte: [
-      { name: "My portfolio", url: "https://github.com/1rvyn/ssr-portfolio", logo: "github-icon.png",
-       description: "My portfolio website, built with SvelteKit." 
-      },
-      { name: "TBD", url: "https://github.com/1rvyn/", logo: "github-icon.png",
-       description: "My frontend for my honours project soon to be built with sveltekit"
-       }
+      { name: "Authentication microservice", url: "https://github.com/1rvyn/backend-api", logo: "github-icon32x.png", 
+      description: "A go web-app to handle login/signup, code submission marking, data storage and more." 
+    },
+      { name: "Endpoint-stresser", url: "https://github.com/1rvyn/endpoint-stresser", logo: "github-icon32x.png", 
+      description: "An endpoint stresser using Go-Routines to test web-app scalability + p99/p50 timings." 
+    },
+    { name: "LeetcodeEsque", url: "https://irvyn.xyz", logo: "favicon-32x32.png", 
+      description: "The front-end for my honours project, a leetcode-esque website to help practice coding problems." 
+    },
 
     ],
-    Others: [
-      { name: "RF-Letter-Recognition", url: "https://github.com/1rvyn/RF-Letter-recognotion", logo: "github-icon.png",
+    Node: [
+      { name: "F1 data web app", url: "https://github.com/1rvyn/f1-data", logo: "github-icon32x.png", 
+      description: "A web app that allows users to create matplotlib graphs/charts showing telemetry data from f1."},
+      { name: "Youtube data overhead viewer ", url: "https://irvyn.love", logo: "github-icon32x.png", 
+      description: "A data visualisation tool that allows users to see semi-accurate caluclations on the amount of data channel's use on youtube."},
+      {name: "Enterprise-web-system", url: "https://github.com/1rvyn/ent-web-system", logo: "github-icon32x.png",
+      description: "A Golang backend with a react frontend which lets users create quotes for projects with a randomised fudge factor."},
+      { name: "My portfolio", url: "https://github.com/1rvyn/ssr-portfolio", logo: "favicon-32x32.png",
+       description: "My portfolio website, built with SvelteKit and hosted with Vercel." 
+      }
+    ],
+    Python: [
+      { name: "RF-Letter-Recognition", url: "https://github.com/1rvyn/RF-Letter-recognotion", logo: "github-icon32x.png",
        description: "A random forest classifier to recognise letters from the MNIST dataset." 
       },
-      { name: "Sentiment Analysis", url: "https://github.com/1rvyn/sentiment_analysis", logo: "github-icon.png",
-       description: "A large investigation into multiple AI models & pipelines & training methods to perform sentiment analysis (both keras & sklearn models)" 
+      { name: "Sentiment Analysis", url: "https://github.com/1rvyn/sentiment_analysis", logo: "github-icon32x.png",
+       description: "Using NLP to perform sentiment analysis (using both keras & sklearn models)" 
       },
-      { name: "Game Collection", url: "https://github.com/1rvyn/GameCollection", logo: "github-icon.png",
-       description: "A collection of games I have made in python using pygame. (Around 2018 @ college)"
+      { name: "Game Collection", url: "https://github.com/1rvyn/GameCollection", logo: "github-icon32x.png",
+       description: "A collection of games I have made in python using pygame."
        },
+       { name: "Rat Maze Game", url: "https://github.com/1rvyn/Rat_Matrix_Maze", logo: "github-icon32x.png",
+       description: "Another game made in college, a maze game where you play as a rat trying to get to the sprout."
+       },
+    ],
+    Others: [
+      { name: "f1 hub app", url: "https://github.com/1rvyn/F1HubApp", logo: "github-icon32x.png",
+       description: "An android app which shows the latest f1 news, results, standings and the location of the race using google maps (to help plan trips to the venue)."
+       }
     ],
   };
   
@@ -57,37 +69,59 @@ function closeDropdown() {
 {#if showDropdown}
   <div class="dropdown fade-in" id="myDropdown" >
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <i class="fas fa-times close-btn" on:click={closeDropdown}></i> 
+    <i class="fas fa-times close-btn" on:click={closeDropdown}></i>
 
-    <h3 id={selectedLang}>My {selectedLang} projects</h3>
-    <!-- Add a new div with class "project-content" -->
-    {#each projects[selectedLang] as project}
-    <div class="project">
-      <a href={project.url} target="_blank" rel="noreferrer">
-        <div class="project-content">
-          <img src={project.logo} size=32x32 alt={project.name} />
-          <span>{project.name}</span>
-        </div>
-      </a>
-      <p id="project-description">{project.description}</p>
+    <div class="content-container">
+      <div class="header-container">
+        <h3 id={selectedLang}>My {selectedLang} projects</h3>
+      </div>
+      <div class="projects-container">
+        {#each projects[selectedLang] as project}
+          <div class="project">
+            <a href={project.url} target="_blank" rel="noreferrer">
+              <div class="project-content">
+                <img src={project.logo} size=32x32 alt={project.name} />
+                <span>{project.name}</span>
+              </div>
+            </a>
+            <p id="project-description">{project.description}</p>
+          </div>
+        {/each}
+      </div>
     </div>
-    {/each}
-
   </div>
 {/if}
+
+
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div id="current-languages">
   I am currently working with<br>
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span class={activeButton === 'Go' ? 'lang-button active' : 'lang-button'} id="Go" on:click={() => toggleDropdown('Go')}>Go<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <span class={activeButton === 'Node.js' ? 'lang-button active' : 'lang-button'} id="Node" on:click={() => toggleDropdown('Node')}>Node.js<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <span class={activeButton === 'Svelte' ? 'lang-button active' : 'lang-button'} id="Svelte" on:click={() => toggleDropdown('Svelte')}>Svelte<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <span class={activeButton === 'Node.js' ? 'lang-button active' : 'lang-button'} id="Node" on:click={() => toggleDropdown('Node')}>Javascript<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <span class={activeButton === 'Python' ? 'lang-button active' : 'lang-button'} id="Python" on:click={() => toggleDropdown('Python')}>Python/AI + ML<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span id="intro-langes">and</span>
   <span class={activeButton === 'Others' ? 'lang-button active' : 'lang-button'} id="Others" on:click={() => toggleDropdown('Others')}>Others<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
 </div>
 
 <style>
+
+.projects-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .projects-container::-webkit-scrollbar-track {
+    background-color: #38152A;
+    border-radius: 10px;
+  }
+
+  .projects-container::-webkit-scrollbar-thumb {
+    background-color: #00ADD8;
+    border-radius: 10px;
+  }
+
+
     .project {
     display: flex;
     flex-direction: column;
@@ -151,27 +185,27 @@ function closeDropdown() {
     background-color: #00ADD8;
   }
   
-  #Node {
+  #Python {
     color: #339933;
   }
   
-  #Node > .underline {
+  #Python > .underline {
     background-color: #339933;
   }
   
-  #Svelte {
+  #Others {
     color: #ff3e00;
   }
   
-  #Svelte > .underline {
+  #Others > .underline {
     background-color: #ff3e00;
   }
   
-  #Others {
+  #Node {
     color: #FFD500;
   }
   
-  #Others > .underline {
+  #Node > .underline {
     background-color: #FFD500;
   }
   
@@ -206,10 +240,22 @@ function closeDropdown() {
   font-family: 'Inconsolata', monospace; 
 }
 
-.dropdown h3 {
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .header-container {
     text-align: center;
     margin-bottom: 1rem;
   }
+
+  .projects-container {
+    overflow-y: auto;
+  }
+
 
   .dropdown.fade-in {
     opacity: 1;
