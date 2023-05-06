@@ -19,6 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.3.0",
+		"@vercel/analytics": "^1.0.1",
 		"dayjs": "^1.11.7",
 		"encom-globe": "^0.5.4"
 	}
