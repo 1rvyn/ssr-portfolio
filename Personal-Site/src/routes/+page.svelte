@@ -3,6 +3,7 @@
 	import Age from './Age.svelte';
 	import Tech from './Tech.svelte';
 	import Commits from './Commits.svelte';
+
 </script>
 <svelte:head>
 	<title>Home</title>
