@@ -1,9 +1,15 @@
   <div class="hire-history">
 	<p class="home-hires">
-	  <span id="small-heading">Currently @ </span>
+		<span id="small-heading">Previously @ </span>
+		<a href="https://www.rgu.ac.uk" target="_blank" rel="noreferrer">RGU</a>
+		<br>
+		<span id="job-description">Software Honours-Student (2:1 Expected)</span>
+	  </p>
+	<p class="home-hires">
+	  <span id="small-heading">Previously @ </span>
 	  <a href="https://www.rgu.ac.uk" target="_blank" rel="noreferrer">RGU</a>
 	  <br>
-	  <span id="job-description">Lab Assistant, Software Honours-Student</span>
+	  <span id="job-description">Lab Assistant, Dynamic Web Development</span>
 	</p>
 	<p class="home-hires">
 	  <span id="small-heading">Previously @ </span>
@@ -14,7 +20,7 @@
 	<p class="home-hires">
 	  <span id="small-heading">Previously @ </span>
 	  <a href="https://www.moonsworth.com/" target="_blank" rel="noreferrer">Moonsworth</a><br>
-	  <span id="job-description">QA & Support Analyst</span>
+	  <span id="job-description">QA & Support</span>
 	</p>
   </div>
 
