@@ -45,7 +45,10 @@
     Others: [
       { name: "f1 hub app", url: "https://github.com/1rvyn/F1HubApp", logo: "github-icon32x.png",
        description: "An android app which shows the latest f1 news, results, standings and the location of the race using google maps (to help plan trips to the venue)."
-       }
+       },
+       { name: "Misc technologies", url: "https://github.com/1rvyn/t", logo: "github-icon32x.png",
+   description: `Some of the other technologies I have used include: AWS, GCP, Azure, OVH, Kuberenetes, Docker, Git, Redis, PostgreSQL, MongoDB, MySQL, C#, C++.`
+  }
     ],
   };
   
