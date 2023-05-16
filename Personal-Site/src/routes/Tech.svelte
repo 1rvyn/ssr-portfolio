@@ -12,16 +12,16 @@
       { name: "Endpoint-stresser", url: "https://github.com/1rvyn/endpoint-stresser", logo: "github-icon32x.png", 
       description: "An endpoint stresser using Go-Routines to test web-app scalability + p99/p50 timings." 
     },
-    { name: "LeetcodeEsque", url: "https://irvyn.xyz", logo: "favicon-32x32.png", 
-      description: "The front-end for my honours project, a leetcode-esque website to help practice coding problems." 
+    { name: "LeetcodeEsque", url: "https://github.com/1rvyn/leetcode-esque", logo: "favicon-32x32.png", 
+      description: "The front-end for my honours project, a leetcode-esque website to help practice coding problems. (watch the video in the readme to see it in action)" 
     },
 
     ],
     Node: [
       { name: "F1 data web app", url: "https://github.com/1rvyn/f1-data", logo: "github-icon32x.png", 
       description: "A web app that allows users to create matplotlib graphs/charts showing telemetry data from f1."},
-      { name: "Youtube data overhead viewer ", url: "https://irvyn.love", logo: "github-icon32x.png", 
-      description: "A data visualisation tool that allows users to see semi-accurate caluclations on the amount of data channel's use on youtube."},
+      { name: "Youtube data overhead viewer ", url: "https://github.com/1rvyn/datavis-2", logo: "github-icon32x.png", 
+      description: "A data visualisation tool that allows users to see semi-accurate caluclations on the amount of data channel's use on youtube. (needs facelift)"},
       {name: "Enterprise-web-system", url: "https://github.com/1rvyn/ent-web-system", logo: "github-icon32x.png",
       description: "A Golang backend with a react frontend which lets users create quotes for projects with a randomised fudge factor."},
       { name: "My portfolio", url: "https://github.com/1rvyn/ssr-portfolio", logo: "favicon-32x32.png",
@@ -46,9 +46,12 @@
       { name: "f1 hub app", url: "https://github.com/1rvyn/F1HubApp", logo: "github-icon32x.png",
        description: "An android app which shows the latest f1 news, results, standings and the location of the race using google maps (to help plan trips to the venue)."
        },
-       { name: "Misc technologies", url: "https://github.com/1rvyn/t", logo: "github-icon32x.png",
-   description: `Some of the other technologies I have used include: AWS, GCP, Azure, OVH, Kuberenetes, Docker, Git, Redis, PostgreSQL, MongoDB, MySQL, C#, C++.`
-  }
+       { name: "Misc technologies", url: "https://github.com/1rvyn/", logo: "github-icon32x.png",
+        description: `Some of the other technologies I have used include: AWS, GCP, Azure, OVH, Kuberenetes, Docker, Git, Redis, PostgreSQL, MongoDB, MySQL, C#, C++.`
+        },
+      { name: "Codewars", url: "https://www.codewars.com", logo: "logo-codewars.svg",
+      description: `I'm currently #1 place in my schools Codewars team where I practice algorithim questions.`
+      }
     ],
   };
   
@@ -105,7 +108,7 @@ function closeDropdown() {
   <span class={activeButton === 'Node.js' ? 'lang-button active' : 'lang-button'} id="Node" on:click={() => toggleDropdown('Node')}>Javascript<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span class={activeButton === 'Python' ? 'lang-button active' : 'lang-button'} id="Python" on:click={() => toggleDropdown('Python')}>Python/AI + ML<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span id="intro-langes">and</span>
-  <span class={activeButton === 'Others' ? 'lang-button active' : 'lang-button'} id="Others" on:click={() => toggleDropdown('Others')}>Others<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <span class={activeButton === 'Others' ? 'lang-button active' : 'lang-button'} id="Others" on:click={() => toggleDropdown('Others')}>Other<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
 </div>
 
 <style>
