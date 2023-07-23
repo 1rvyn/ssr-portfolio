@@ -3,7 +3,7 @@
 		<span id="small-heading">Previously @ </span>
 		<a href="https://www.rgu.ac.uk" target="_blank" rel="noreferrer">RGU</a>
 		<br>
-		<span id="job-description">Software Honours-Student (2:1 Expected)</span>
+		<span id="job-description">Computer Science (First Class Honours BSc)</span>
 	  </p>
 	<p class="home-hires">
 	  <span id="small-heading">Previously @ </span>
