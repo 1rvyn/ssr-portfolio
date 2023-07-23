@@ -7,13 +7,16 @@
   const projects = {
     Go: [
       { name: "Authentication microservice", url: "https://github.com/1rvyn/backend-api", logo: "github-icon32x.png", 
-      description: "A go web-app to handle login/signup, code submission marking, data storage and more." 
+      description: "A go web-app to handle login/signup, code submission marking, data storage and more (for use with my honours project)." 
     },
       { name: "Endpoint-stresser", url: "https://github.com/1rvyn/endpoint-stresser", logo: "github-icon32x.png", 
       description: "An endpoint stresser using Go-Routines to test web-app scalability + p99/p50 timings." 
     },
     { name: "LeetcodeEsque", url: "https://github.com/1rvyn/leetcode-esque", logo: "favicon-32x32.png", 
       description: "The front-end for my honours project, a leetcode-esque website to help practice coding problems. (watch the video in the readme to see it in action)" 
+    },
+    { name: "GraphQL-employee-api", url: "https://github.com/1rvyn/graphql", logo: "github-icon32x.png", 
+      description: "A GraphQL app to emulate onboarding employees, welcome email, docker-compose for email server, database + API." 
     },
 
     ],
