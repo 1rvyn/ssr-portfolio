@@ -20,7 +20,7 @@
     },
 
     ],
-    Node: [
+    Typescript: [
       { name: "F1 data web app", url: "https://github.com/1rvyn/f1-data", logo: "github-icon32x.png", 
       description: "A web app that allows users to create matplotlib graphs/charts showing telemetry data from f1."},
       { name: "Youtube data overhead viewer ", url: "https://github.com/1rvyn/datavis-2", logo: "github-icon32x.png", 
@@ -108,7 +108,7 @@ function closeDropdown() {
   I am currently working with<br>
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span class={activeButton === 'Go' ? 'lang-button active' : 'lang-button'} id="Go" on:click={() => toggleDropdown('Go')}>Go<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <span class={activeButton === 'Node.js' ? 'lang-button active' : 'lang-button'} id="Node" on:click={() => toggleDropdown('Node')}>Javascript<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <span class={activeButton === 'Javascript' ? 'lang-button active' : 'lang-button'} id="Javascript" on:click={() => toggleDropdown('Typescript')}>Typescript<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span class={activeButton === 'Python' ? 'lang-button active' : 'lang-button'} id="Python" on:click={() => toggleDropdown('Python')}>Python/AI + ML<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <span id="intro-langes">and</span>
   <span class={activeButton === 'Others' ? 'lang-button active' : 'lang-button'} id="Others" on:click={() => toggleDropdown('Others')}>Other<span class="underline"></span></span>,  <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -210,13 +210,15 @@ function closeDropdown() {
     background-color: #ff3e00;
   }
   
-  #Node {
+  #Javascript {
     color: #FFD500;
   }
   
-  #Node > .underline {
+  #Javascript > .underline {
     background-color: #FFD500;
   }
+
+  #Typescript {  color: #FFD500;}
   
   .lang-button:hover > .underline {
     width: 100%;
